@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scannerBox {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(74, 0, 224, 0.3);
+}
+
+.qrReader {
+    width: 100%;
+    height: 100%;
+}
+
+.scanLine {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #4b61ff, #b983ff);
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.loading {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4b61ff;
+    font-size: 1.2rem;
+}
