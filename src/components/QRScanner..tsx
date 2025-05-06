@@ -20,7 +20,7 @@ const QRScanner = () => {
                 console.log("QR Code:", decodedText);
 
                 try {
-                    await fetch("https://your-backend.com/api/qr", {
+                    await fetch("http://localhost:4400/events/api", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
